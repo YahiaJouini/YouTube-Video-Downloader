@@ -10,7 +10,6 @@ def home_page():
 def status():
     if request.method == "POST" and request.form['url']!="":
         url = request.form['url']
-        print(url)
         try:
             Download(url)
             return render_template('success.html',results='Successfully downloaded!')
